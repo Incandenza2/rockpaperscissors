@@ -1,6 +1,6 @@
 
 
-function computerPlay() {
+function getComputerPlay() {
     let randomnumber = Math.random();
     if (randomnumber>(2/3)) {
         let computerChoice = "rock";
@@ -17,7 +17,7 @@ function computerPlay() {
     }
 
 }
-function userPlay() {
+function getUserPlay() {
     let userInput = prompt("Will you pick rock, paper, or scissors?");
         if (userInput.match(/^rock$/i)) {
             let playerChoice = "rock";
@@ -33,7 +33,7 @@ function userPlay() {
             return playerChoice;
         } else {
             alert("Pick either rock, paper, or scissors!");
-            userPlay();
+            getUserPlay();
         }
 }
 
@@ -53,23 +53,23 @@ function computeClash() {
     }
 }
 
-function game() {
+function startGame() {
     // first it prompts you to type rock, paper, or scissors,
-    playerChoice = userPlay();
-    // then it calls the computerPlay function,
-    computerChoice = computerPlay();
+    playerChoice = getUserPlay();
+    // then it calls the getComputerPlay function,
+    computerChoice = getComputerPlay();
     // then we run through the possible outcomes and for each we
     result = computeClash();
     return result;
     // output a different message as we record a victory and keep count of games? maybe
 }
 
-function match() {
+function startMatch() {
     let victories = 0;
     let defeats = 0;
     console.log("This will be a best of 3 match. Get ready.");
     for (;victories !== 3 && defeats !== 3;) {
-        result = game()
+        result = startGame()
         if (result === 1) {
             victories = parseInt(victories) + 1;
             console.log("Score is currently " + victories + " to " + defeats + ".");
