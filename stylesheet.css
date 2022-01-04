@@ -1,0 +1,73 @@
+html{
+    background-color:rgb(53, 48, 48);
+    height: 100%;
+}
+body {
+    display:flex;
+    justify-content: space-between;
+    margin: 0px;
+    min-height: 100%;
+}
+
+.playArea {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 3;
+}
+
+.score {
+    display:flex;
+    background-color: orange;
+    margin: 0px;
+    flex-direction: column;
+    align-items: center;
+    justify-content:baseline;
+    padding: 0 50px;
+    flex-grow: 1;
+}
+h3 {
+    font-size: 8em;
+}
+h1 {
+    color:white;    
+}
+
+.buttonLine {
+    display:flex;
+    justify-content: space-evenly;
+    margin: 100px;
+    gap: 60px;
+}
+
+.buttonLine button {
+    padding: 40px;
+}
+
+.logBox {
+    height: 200px;
+    width: 900px;
+    overflow: scroll;
+    display:flex;
+    flex-direction:column;
+
+}
+
+p {
+    margin: 3px;
+    color:white;
+}
+
+
+.logBox button {
+    margin: 3px;
+    font-style: bold;
+}
+
+.victorious {
+    background-color:  green;
+}
+
+.defeated {
+    background-color:  red;
+}
